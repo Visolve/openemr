@@ -8,11 +8,11 @@
 //
 
 
-class AMC_304c extends AbstractAmcReport
+class AMC_304d extends AbstractAmcReport
 {
     public function getTitle()
     {
-        return "AMC_304c";
+        return "AMC_304d";
     }
 
     public function getObjectToCount()
@@ -22,11 +22,11 @@ class AMC_304c extends AbstractAmcReport
  
     public function createDenominator() 
     {
-        return new AMC_304c_Denominator();
+        return new AMC_304d_Denominator();
     }
     
     public function createNumerator()
     {
-        return new AMC_304c_Numerator();
+        return new AMC_304d_Numerator();
     }
 }

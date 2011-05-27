@@ -42,17 +42,17 @@ class ReportTypes
     	"med_list_amc" => array( ReportTypes::AMC, "AMC_302d" ),
     	"med_allergy_list_amc" => array( ReportTypes::AMC, "AMC_302e" ),
     	"record_vitals_amc" => array( ReportTypes::AMC, "AMC_302f" ),
-    	"record_smoke_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-    	"lab_result_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-    	"med_reconc_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "patient_edu_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "cpoe_med_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "e_prescribe_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
+    	"record_smoke_amc" => array( ReportTypes::AMC, "AMC_302g" ),
+    	"lab_result_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_302h, labs
+    	"med_reconc_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_302j, transitions
+        "patient_edu_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_302m, patients
+        "cpoe_med_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_304a, patients
+        "e_prescribe_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_304b, prescriptions
         "record_dem_amc" => array( ReportTypes::AMC, "AMC_304c" ),
-        "send_reminder_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "provide_rec_pat_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "timely_access_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-    	"provide_sum_pat_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ),
-        "send_sum_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" )
+        "send_reminder_amc" => array( ReportTypes::AMC, "AMC_304d" ),
+        "provide_rec_pat_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_304f, patients
+        "timely_access_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_304g, patients
+    	"provide_sum_pat_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ), //AMC_304h, visits
+        "send_sum_amc" => array( ReportTypes::AMC, "AMC_Unimplemented" ) //AMC_304i, transitions
     );
 }

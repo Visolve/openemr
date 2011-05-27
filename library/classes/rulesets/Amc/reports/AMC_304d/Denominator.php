@@ -7,20 +7,19 @@
 // of the License, or (at your option) any later version.
 //
 
-class AMC_302f_Denominator implements AmcFilterIF
+class AMC_304d_Denominator implements AmcFilterIF
 {
     public function getTitle()
     {
-        return "AMC_302f Denominator";
+        return "AMC_304d Denominator";
     }
     
     public function test( AmcPatient $patient, $beginDate, $endDate ) 
     {
-        // All unique patients seen by the EP or admitted to the eligible
-        // hospital’s or CAH’s inpatient or emergency department (POS 21 or 23)
-        //  (basically needs an encounter within the report dates)
-        $options = array( Encounter::OPTION_ENCOUNTER_COUNT => 1 );
-        if (Helper::checkAnyEncounter($patient, $beginDate, $endDate, $options)) {
+        // All unique patients with age greater than or equal to 65
+        //   or less than or equal to 5 at the end report date.
+        if ( ($patient->calculateAgeOnDate($endDate) >= 65) || 
+             ($patient->calculateAgeOnDate($endDate) <= 5) ) {
             return true;
         }
         else {
